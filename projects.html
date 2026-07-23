@@ -16,30 +16,34 @@
       background: #0B0E14;
       color: #E2E8F0;
       line-height: 1.6;
+      /* compensate for fixed header */
+      padding-top: 70px;
     }
 
-    .container {
+    /* FIXED HEADER – compact & premium */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #11151C;
+      border-bottom: 1px solid #1E293B;
+      z-index: 1000;
+      padding: 12px 0;           /* reduced padding */
+    }
+    .header-inner {
       width: 90%;
       max-width: 1200px;
       margin: auto;
-      padding: 40px 0;
-    }
-
-    /* Header */
-    header {
-      background: #11151C;
-      padding: 20px 0;
-      border-bottom: 1px solid #1E293B;
-    }
-    .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
     .logo {
-      font-size: 1.8rem;
+      font-size: 1.5rem;         /* slightly smaller */
       font-weight: 700;
       color: #F8FAFC;
+      text-decoration: none;
     }
     .logo span {
       color: #3B82F6;
@@ -47,18 +51,50 @@
     nav a {
       color: #94A3B8;
       text-decoration: none;
-      margin-left: 30px;
+      margin-left: 28px;
       font-weight: 500;
-      transition: 0.3s;
+      font-size: 0.95rem;
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.3s;
     }
-    nav a:hover, nav a.active {
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0;
+      height: 2px;
+      background: #FFFFFF;        /* bright white underline */
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: #FFFFFF;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    /* Active link – word highlighted + white underline */
+    nav a.active {
       color: #3B82F6;
+    }
+    nav a.active::after {
+      width: 100%;
+      background: #FFFFFF;       /* white underline for active page */
+    }
+
+    /* Main container */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 0;
     }
 
     /* Page Title */
     .page-title {
       text-align: center;
-      margin: 60px 0 40px;
+      margin: 20px 0 40px;
     }
     .page-title h1 {
       font-size: 3rem;
@@ -177,20 +213,21 @@
     }
 
     @media (max-width: 768px) {
+      body { padding-top: 80px; }   /* adjust for smaller header on mobile */
       .header-inner {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
       }
       nav a {
-        margin: 0 15px;
+        margin: 0 12px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
+  <!-- Fixed Header -->
   <header>
-    <div class="container header-inner">
+    <div class="header-inner">
       <a href="index.html" class="logo">Joshi<span>Portfolio</span></a>
       <nav>
         <a href="index.html">Home</a>
