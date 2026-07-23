@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Yalamanchili Joshi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0B0E14;
+      color: #E2E8F0;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    /* Header */
+    header {
+      background: #11151C;
+      padding: 20px 0;
+      border-bottom: 1px solid #1E293B;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #F8FAFC;
+    }
+    .logo span {
+      color: #3B82F6;
+    }
+    nav a {
+      color: #94A3B8;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: #3B82F6;
+    }
+
+    /* Page Title */
+    .page-title {
+      text-align: center;
+      margin: 60px 0 40px;
+    }
+    .page-title h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #F8FAFC;
+      margin-bottom: 10px;
+    }
+    .page-title p {
+      color: #94A3B8;
+      font-size: 1.1rem;
+    }
+
+    /* Section headings */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #F8FAFC;
+      margin: 60px 0 30px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #3B82F6;
+      display: inline-block;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    /* Project Card */
+    .project-card {
+      background: #161B22;
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid #1E293B;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card:hover {
+      border-color: #3B82F6;
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(59,130,246,0.1);
+    }
+    .card-icon {
+      font-size: 2.5rem;
+      color: #3B82F6;
+      margin-bottom: 20px;
+    }
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #F8FAFC;
+      margin-bottom: 10px;
+    }
+    .card-description {
+      color: #94A3B8;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .tag {
+      background: #1E293B;
+      color: #60A5FA;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #3B82F6;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      margin-top: auto;
+    }
+    .card-link:hover {
+      color: #60A5FA;
+    }
+    .coming-soon {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245,158,11,0.15);
+      color: #F59E0B;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: auto;
+    }
+
+    /* IT Projects section */
+    .it-section {
+      margin-top: 60px;
+    }
+
+    /* Footer */
+    footer {
+      background: #11151C;
+      border-top: 1px solid #1E293B;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 80px;
+      color: #64748B;
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 15px;
+      }
+      nav a {
+        margin: 0 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Joshi<span>Portfolio</span></a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Page Title -->
+    <div class="page-title">
+      <h1>My Projects</h1>
+      <p>Financial tools, dashboards & web applications</p>
+    </div>
+
+    <!-- Finance Projects -->
+    <h2 class="section-title">📊 Finance & Advisory Tools</h2>
+    <div class="projects-grid">
+      <!-- Budget vs Actual Dashboard -->
+      <div class="project-card">
+        <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+        <h3 class="card-title">Budget vs Actual Dashboard</h3>
+        <p class="card-description">Interactive FP&A tool comparing departmental budgets with actual spending. Variance analysis, KPIs, and drill‑down reporting.</p>
+        <div class="tech-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Google Sheets API</span>
+        </div>
+        <a href="https://yjoshi7.github.io/budget-actual-dashboard/" class="card-link" target="_blank">
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+      </div>
+
+      <!-- Goal-Based Planning Calculator -->
+      <div class="project-card">
+        <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+        <h3 class="card-title">Goal‑Based Planning Calculator</h3>
+        <p class="card-description">Multi‑goal financial planner with inflation adjustment, SIP calculator, readiness score, and contribution tracking.</p>
+        <div class="tech-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Chart.js</span>
+          <span class="tag">Google Sheets API</span>
+        </div>
+        <a href="https://yjoshi7.github.io/Goal-Based-Planning-Calculator/" class="card-link" target="_blank">
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+      </div>
+
+      <!-- Risk Profiler & Asset Allocation -->
+      <div class="project-card">
+        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3 class="card-title">Risk Profiler & Asset Allocation</h3>
+        <p class="card-description">Questionnaire‑based risk assessment generating a model portfolio (equity, debt, gold) with a suitability explanation.</p>
+        <div class="tech-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <span class="coming-soon"><i class="fas fa-clock"></i> Coming Soon</span>
+      </div>
+
+      <!-- Comprehensive Client Financial Plan -->
+      <div class="project-card">
+        <div class="card-icon"><i class="fas fa-file-invoice"></i></div>
+        <h3 class="card-title">Comprehensive Client Financial Plan</h3>
+        <p class="card-description">Mock client case study with net worth, cash flow, goal planning, insurance gap, and a printable report.</p>
+        <div class="tech-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Chart.js</span>
+        </div>
+        <span class="coming-soon"><i class="fas fa-clock"></i> Coming Soon</span>
+      </div>
+
+      <!-- Investment Portfolio Dashboard -->
+      <div class="project-card">
+        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+        <h3 class="card-title">Investment Portfolio Dashboard</h3>
+        <p class="card-description">Track and analyse a multi‑asset portfolio with allocation charts, performance metrics, and rebalancing suggestions.</p>
+        <div class="tech-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Chart.js</span>
+        </div>
+        <span class="coming-soon"><i class="fas fa-clock"></i> Coming Soon</span>
+      </div>
+
+      <!-- Cash Flow Dashboard -->
+      <div class="project-card">
+        <div class="card-icon"><i class="fas fa-money-bill-wave"></i></div>
+        <h3 class="card-title">Cash Flow Dashboard</h3>
+        <p class="card-description">Visual income/expense tracker with monthly breakdown, surplus/deficit analysis, and future cash flow projections.</p>
+        <div class="tech-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Chart.js</span>
+        </div>
+        <span class="coming-soon"><i class="fas fa-clock"></i> Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- IT Projects -->
+    <div class="it-section">
+      <h2 class="section-title">💻 IT & Web Development</h2>
+      <div class="projects-grid">
+        <!-- Hospital Management System -->
+        <div class="project-card">
+          <div class="card-icon"><i class="fas fa-hospital"></i></div>
+          <h3 class="card-title">Hospital Management System</h3>
+          <p class="card-description">Comprehensive system for patient registration, appointment scheduling, and billing management.</p>
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="https://yjoshi7.github.io/hospital-management-system/" class="card-link" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+        </div>
+
+        <!-- IELTS Practice Website -->
+        <div class="project-card">
+          <div class="card-icon"><i class="fas fa-language"></i></div>
+          <h3 class="card-title">IELTS Practice Platform</h3>
+          <p class="card-description">Interactive learning website with practice tests, tips, and progress tracking for IELTS candidates.</p>
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="https://yjoshi7.github.io/IeltsRevolution/" class="card-link" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+        </div>
+
+        <!-- E-commerce Website -->
+        <div class="project-card">
+          <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+          <h3 class="card-title">E‑commerce Website</h3>
+          <p class="card-description">Functional storefront with shopping cart, product catalogue, and user login system.</p>
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="https://yjoshi7.github.io/e-commerce-website/" class="card-link" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+        </div>
+
+        <!-- To-Do List App -->
+        <div class="project-card">
+          <div class="card-icon"><i class="fas fa-tasks"></i></div>
+          <h3 class="card-title">To‑Do List Web App</h3>
+          <p class="card-description">Productivity tool with local storage, drag‑and‑drop, and real‑time updates.</p>
+          <div class="tech-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="https://yjoshi7.github.io/to-do-list-web-app/" class="card-link" target="_blank">
+            <i class="fas fa-external-link-alt"></i> Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Yalamanchili Joshi. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
