@@ -450,7 +450,7 @@
                     </div>
                 </div>
                 <div>
-                    <img src="assets/images/about.jpeg" alt="About Joshi" style="width:100%; border-radius:12px; border:1px solid #1E293B;">
+                    <img src="assets/images/profile.jpeg" alt="Yalamanchili Joshi" style="width:100%; border-radius:12px; border:1px solid #1E293B;">
                 </div>
             </div>
         </section>
@@ -569,11 +569,13 @@
                         <span>Rajahmundry, India (Willing to relocate)</span>
                     </div>
                 </div>
+                <!-- Working contact form via Formspree -->
                 <div class="contact-form">
-                    <form onsubmit="event.preventDefault(); alert('Thank you! This form is a placeholder.');">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea rows="5" placeholder="Your Message"></textarea>
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="subject" placeholder="Subject">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
