@@ -160,12 +160,11 @@
             display: inline-block;
         }
 
-        /* ABOUT */
+        /* ABOUT (full width, no image) */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;   /* single column */
             gap: 50px;
-            align-items: center;
             margin-bottom: 60px;
         }
         .about-text p {
@@ -427,7 +426,7 @@
             </div>
         </section>
 
-        <!-- ABOUT -->
+        <!-- ABOUT (no image, full width) -->
         <section>
             <h2 class="section-title">About Me</h2>
             <div class="about-grid">
@@ -448,9 +447,6 @@
                             <div class="detail-value">Rajahmundry, India</div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <img src="assets/images/profile.jpeg" alt="Yalamanchili Joshi" style="width:100%; border-radius:12px; border:1px solid #1E293B;">
                 </div>
             </div>
         </section>
@@ -547,7 +543,7 @@
             </div>
         </section>
 
-        <!-- CONTACT -->
+        <!-- CONTACT (working form) -->
         <section>
             <h2 class="section-title">Let's Connect</h2>
             <div class="contact-grid">
@@ -569,9 +565,9 @@
                         <span>Rajahmundry, India (Willing to relocate)</span>
                     </div>
                 </div>
-                <!-- Working contact form via Formspree -->
+                <!-- Contact Form – replace YOUR_FORM_ID with your actual Formspree ID -->
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <form action="https://formspree.io/f/xdaqwydo" method="POST">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <input type="text" name="subject" placeholder="Subject">
